@@ -68,6 +68,9 @@ wheels = [
 name = "chequer"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "holidays" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -77,6 +80,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "holidays", specifier = ">=0.57" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -153,6 +157,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9d/db/3ef5bb276dae18d6ec2124224403d1d67bccdbefc17af4cc8f553e341ab1/filelock-3.16.1.tar.gz", hash = "sha256:c249fbfcd5db47e5e2d6d62198e565475ee65e4831e2561c8e313fa7eb961435", size = 18037 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b9/f8/feced7779d755758a52d1f6635d990b8d98dc0a29fa568bbe0625f18fdf3/filelock-3.16.1-py3-none-any.whl", hash = "sha256:2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0", size = 16163 },
+]
+
+[[package]]
+name = "holidays"
+version = "0.58"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bf/40/b9483c9d7b616c8f3a12ce3ddffa78e141d49726495de8647c00a8d046aa/holidays-0.58.tar.gz", hash = "sha256:cbe5f3b862474b8f6e5f7ee423f17f3ebd7836fcc74b38540f97b27a7f92dca7", size = 562407 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0f/69/fa78950f99c0add5222f693d13b987b642aa778bca63fb9aaaca365be16c/holidays-0.58-py3-none-any.whl", hash = "sha256:74eb0bd07db862c5b108d5e42cbd33c37ea066a2e8dc54f4858dd3cceef5ee8b", size = 1114273 },
 ]
 
 [[package]]
