@@ -1,0 +1,44 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        stages: [pre-commit, pre-rebase]
+        args: [--fix]
+      - id: ruff-format
+        stages: [pre-commit, pre-rebase]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-ast
+        stages: [pre-commit, pre-rebase]
+      - id: check-case-conflict
+        stages: [pre-commit, pre-rebase]
+      - id: check-docstring-first
+        stages: [pre-commit, pre-rebase]
+      - id: check-merge-conflict
+        stages: [pre-commit, pre-rebase]
+      - id: check-symlinks
+        stages: [pre-commit, pre-rebase]
+      - id: check-vcs-permalinks
+        stages: [pre-commit, pre-rebase]
+      - id: debug-statements
+        stages: [pre-commit, pre-rebase]
+      - id: detect-aws-credentials
+        stages: [pre-commit, pre-rebase]
+        args: [--allow-missing-credentials]
+      - id: detect-private-key
+        stages: [pre-commit, pre-rebase]
+      - id: check-added-large-files
+        stages: [pre-commit, pre-rebase]
+      - id: check-toml
+        stages: [pre-commit, pre-rebase]
+        types: [toml]
+      - id: check-yaml
+        stages: [pre-commit, pre-rebase]
+        types: [yaml]
+      - id: no-commit-to-branch
+        stages: [pre-commit, pre-rebase]
+      - id: trailing-whitespace
+        stages: [pre-commit, pre-rebase]
+        types: [text]
