@@ -1,0 +1,27 @@
+.buttons-panel {
+    align: center top;
+    padding: 0 1;
+    width: auto;
+    border: solid red;
+}
+
+.main-menu .buttons-panel {
+    width: 20%;
+    height: 100%;
+}
+
+.main-menu .branding-container {
+    width: 80%;
+    height: 100%;
+    align-horizontal: center;
+    align-vertical: middle;
+}
+
+.main-menu .branding-logo {
+    content-align-horizontal: center;
+    content-align-vertical: middle;
+}
+
+.main-menu .branding-subtitle {
+    text-align: center;
+}
