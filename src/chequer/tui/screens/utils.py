@@ -2,8 +2,25 @@
 
 from textual.app import ComposeResult
 from textual.containers import Center, Vertical
-from textual.screen import Screen
+from textual.events import Click
+from textual.screen import ModalScreen, Screen
 from textual.widgets import Button, Footer, Header, Static
+
+
+class SelfClosingModalScreen(ModalScreen):
+    """A modal screen that closes itself when the user clicks outside of it."""
+
+    def on_click(self, event: Click) -> None:
+        """Close the screen if the user clicks outside the modal.
+
+        Args:
+            event (Click): The click event.
+        """
+        clicked, _ = self.get_widget_at(event.screen_x, event.screen_y)
+        # Note that the area outside the modal is the modal itself, while the are inside the modal
+        # will usually have children widgets.
+        if clicked is self:
+            self.dismiss()
 
 
 class UnderConstrucionScreen(Screen):
